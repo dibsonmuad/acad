@@ -1,0 +1,1 @@
+A simple round robin scheduler with semaphore and process control on an 8051 microcontroller. Uses the sdcc compiler to generate hex files. 
