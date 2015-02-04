@@ -1,0 +1,9 @@
+This toy compiler project was written for a compiler implementation course (around 2002). I am using a recursive descent parser here. The language looks a little like pascal with RPN for arithmetic. The emulator that is included used to be a real system at some time in history. 
+
+1. run make inside the src directory. This should create an executable called sc (simple compiler).
+2. ./sc samples/file.mcp (mcp - My ComPiler). There is a sample for matrix multiplication. That's as complicated as it gets.
+3. This should generate a few intermediate files - quads, asm, bin 
+4. Register usage optimization is performed. That's about it. 
+5. Compile src/emulator/emu.c and ./src/emulator/emu ../samples/file.bin
+6. This should run the program "bytecode" in a fetch decode execute cycle until the pc runs out of instructions.
+Luckily, I code better now than I did in 2002! 
