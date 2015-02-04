@@ -1,0 +1,38 @@
+program
+arra : array[3,3];
+arrb : array[3,3];
+arrc : array[3,3];
+j,k,i,temp: integer;
+arrd : array[10];
+%
+
+for i:=0 to 2 do
+    for j:=0 to 2 do
+        read(temp);
+        arra[i,j]:=temp
+    od
+od;
+
+for i:=0 to 2 do
+    for j:=0 to 2 do
+        read(temp);
+        arrb[i,j] := temp
+    od
+od; 
+    
+
+for i:= 0 to 2 do
+    for j := 0 to 2 do
+        for k := 0 to 2 do
+            arrc[i,j] := arrc[i,j] arra[i,k] arrb[k,j] * +
+        od
+    od
+od;
+
+for i:=0 to 2 do    
+    for j:=0 to 2 do
+        temp := arrc[i,j];
+        write(temp)
+    od
+od
+%

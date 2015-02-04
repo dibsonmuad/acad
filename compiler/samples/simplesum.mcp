@@ -1,0 +1,10 @@
+program
+i , j , sum: integer;
+
+%
+
+read(i,j);
+sum := i j +;
+write(sum)
+
+%

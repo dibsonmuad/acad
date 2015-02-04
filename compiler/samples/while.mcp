@@ -1,0 +1,14 @@
+program
+x,i,temp:integer;
+a:array[10];
+%
+i:= 0;
+while i <= 5 do
+	read(x);
+	a[i] := x x * ;
+	temp := a[i];	
+	write(temp);
+	i := i 1+
+od
+
+%

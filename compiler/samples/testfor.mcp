@@ -1,0 +1,9 @@
+program
+i:integer;
+
+%
+for i:= 10 to 20 do
+	write(i)
+od;
+write(i)
+%

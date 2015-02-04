@@ -1,0 +1,12 @@
+program
+a,b,c:integer;
+
+%
+read(a,b);
+if a > b then 
+	write(a)
+else 
+	write(b)
+fi;
+a := a 1 +
+%

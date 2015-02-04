@@ -1,0 +1,21 @@
+program
+b,sum,i:integer;
+a:array[5];
+
+%
+for i:=0 to 4 do
+	readln(b);
+	a[i] := b
+od;
+
+i:=4;
+
+sum:= 0;
+
+while i >= 0 do
+sum := a[i] sum +;
+i:= i 1 -
+od;
+writeln(sum)
+%
+
