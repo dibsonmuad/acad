@@ -1,0 +1,1 @@
+An interface to the ST-Micro L6472 controller using the spi protocol. Uses the Linux spidev driver for communication.

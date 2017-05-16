@@ -1,7 +1,8 @@
 #ifndef __LIST_H__
 #define __LIST_H__
 
-struct list_element {
+struct list_element
+{
     struct list_element* next;
     int value;
 };

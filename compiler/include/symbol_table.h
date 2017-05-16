@@ -1,17 +1,16 @@
 #ifndef __symtable_h__
 #define __symtable_h__
-#include "types.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "types.h"
 /* The symbol table will be an array of structures */
 /* that holds the following information
 
-	1. Symbol - The actual symbol may be a keyword,
-			identifier or constant, also things like
-			'*' ',' '&' ...
+        1. Symbol - The actual symbol may be a keyword,
+                        identifier or constant, also things like
+                        '*' ',' '&' ...
 */
-
 
 extern int nentries;
 
@@ -29,10 +28,10 @@ void preload(FILE* symbol_file);
 token_t* lookup(char* token);
 
 /*inserts a token into the symbol table*/
-token_t* insert(char* token_name,int type);
+token_t* insert(char* token_name, int type);
 
-/*given a token_name and id, create a token of type token_t and return it*/ 
-token_t* create_token(char* token_name, int type );
+/*given a token_name and id, create a token of type token_t and return it*/
+token_t* create_token(char* token_name, int type);
 
 void print_st();
 

@@ -2,8 +2,8 @@
 #ifndef lex_hh_
 #define lex_hh_
 
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
 #include <string.h>
 //#include "myglobals.h"
 #include "symbol_table.h"

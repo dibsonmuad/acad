@@ -5,9 +5,9 @@
 // Serial port ISR. SIO_VECTOR = 4
 void serial_isr(void) using(2) interrupt SI0_VECTOR
 {
-	if(RI && SBUF == XOFF)
-		TI = 0;
-	if(RI && SBUF == XON)
-		TI = 1;	
-	RI=0;
+    if (RI && SBUF == XOFF)
+        TI = 0;
+    if (RI && SBUF == XON)
+        TI = 1;
+    RI = 0;
 }

@@ -2,8 +2,8 @@
 #define __parser__h_
 #include <stdbool.h>
 #include "lex.h"
-#include "stack.h"
 #include "quad_table.h"
+#include "stack.h"
 #include "types.h"
 extern stack SAS;
 extern int gl_nquads;

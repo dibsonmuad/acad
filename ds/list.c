@@ -9,26 +9,25 @@
 #define SUCCESS 1
 #define FAIL 0
 
-
 list_element* create_element(int value)
 {
-   list_element* n = (list_element*) malloc(sizeof(list_element));
-   memset(n, 0, sizeof(list_element));
+    list_element* n = (list_element*)malloc(sizeof(list_element));
+    memset(n, 0, sizeof(list_element));
     n->value = value;
-   return n;
+    return n;
 }
 
 int add(list_element** pHead, int value)
 {
     list_element* n = create_element(value);
-    if(!*pHead)
+    if (!*pHead)
     {
-       *pHead = n;
+        *pHead = n;
     }
     else
     {
         list_element* current = *pHead;
-        while(current->next)
+        while (current->next)
         {
             current = current->next;
         }
@@ -40,29 +39,29 @@ int add(list_element** pHead, int value)
 int del(list_element** pHead, int value)
 {
     list_element* current = *pHead;
-    list_element* prev = current;
-    while(current)
+    list_element* prev    = current;
+    while (current)
     {
-        if(current->value == value)
+        if (current->value == value)
         {
-            if(current == *pHead)
+            if (current == *pHead)
                 *pHead = current->next;
 
             prev->next = current->next;
             free(current);
             break;
         }
-            prev = current;
-            current = current->next;
+        prev    = current;
+        current = current->next;
     }
     return SUCCESS;
 }
 
 int free_list(list_element** pHead)
 {
-    list_element* current = *pHead, *next=NULL;
+    list_element *current = *pHead, *next = NULL;
 
-    while(current)
+    while (current)
     {
         next = current->next;
         free(current);
@@ -73,7 +72,7 @@ int free_list(list_element** pHead)
 int print(list_element** pHead)
 {
     list_element* current = *pHead;
-    while(current)
+    while (current)
     {
         printf("%d ", current->value);
         current = current->next;
@@ -86,16 +85,16 @@ int reverse(list_element** pHead)
 {
     list_element *prev = NULL, *current = *pHead, *next = NULL;
 
-    while(current)
+    while (current)
     {
-        next = current->next;
+        next          = current->next;
         current->next = prev;
-        if(!next)
+        if (!next)
         {
             *pHead = current;
             break;
         }
-        prev = current;
+        prev    = current;
         current = next;
     }
 }
@@ -103,23 +102,22 @@ int reverse(list_element** pHead)
 int push(list_element** pHead, int value)
 {
     list_element* n = create_element(value);
-    n->next = *pHead;
-    *pHead = n;
+    n->next         = *pHead;
+    *pHead          = n;
 }
 
-/*int main()
+int main()
 {
-    list_element* head = create_element(10);
+    list_element* head    = create_element(10);
     list_element** myList = &head;
-    add(myList, 10);
+    add(myList, 15);
     push(myList, 20);
     add(myList, 30);
-    print(*myList);
+    print(myList);
     reverse(myList);
-    print(*myList);
-    reverse1(myList);
+    print(myList);
+    reverse(myList);
     del(myList, 10);
-    add1(myList, 35);
-    print(*myList);
-
-}*/
+    add(myList, 35);
+    print(myList);
+}

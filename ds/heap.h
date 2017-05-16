@@ -3,9 +3,9 @@
 
 struct heap
 {
-   int* data;
-   int capacity;
-   int data_length;
+    int* data;
+    int capacity;
+    int data_length;
 };
 
 struct heap* heap_create(int capacity);
