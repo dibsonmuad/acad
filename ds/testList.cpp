@@ -2,10 +2,10 @@
 
 #if HAVE_GTEST
 #include <gtest/gtest.h>
-class TestList : public ::testing:Test
+class TestList : public ::testing : Test
 {
-    protected:
-        List<int> myList;
+protected:
+    List<int> myList;
 }
 
 TEST_F(TestList, addElement)
