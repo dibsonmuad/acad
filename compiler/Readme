@@ -6,4 +6,4 @@ This toy compiler project was written for a compiler implementation course (arou
 4. Register usage optimization is performed. That's about it. 
 5. Compile src/emulator/emu.c and ./src/emulator/emu ../samples/file.bin
 6. This should run the program "bytecode" in a fetch decode execute cycle until the pc runs out of instructions.
-Luckily, I code better now than I did in 2002! 
+
