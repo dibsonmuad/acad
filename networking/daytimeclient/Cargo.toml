@@ -1,0 +1,10 @@
+[package]
+name = "daytimeclient"
+version = "0.1.0"
+authors = ["Sriram Sundararajan <sriram.sundararajan@gmail.com>"]
+
+[[bin]]
+name = "daytimeclient"
+path = "src/daytimeclient.rs"
+
+[dependencies]
